@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>fieldHint Plugin for jQuery Documentation</title>
+    <link href="http://eddyluten.com/css/all.css" type="text/css" rel="stylesheet" media="all" />
+</head>
+<body>
+<div id="wrapper">
+
+<h1>fieldHint Plugin for jQuery Documentation</h1>
+<p>
+    <a href="http://fieldhint.eddyluten.com/">fieldHint.eddyluten.com</a><br />
+    <strong>Version:</strong> 1.0.0
+</p>
+
+<ul>
+    <li><a href="#description">Description</a></li>
+    <li><a href="#options">Options</a></li>
+    <li><a href="#methods">Methods</a></li>
+    <li><a href="#samples">Usage Samples</a></li>
+</ul>
+
+<h2><a name="description"></a>Description</h2>
+<p>
+    The fieldHint plugin for jQuery is a lightweight plugin for displaying
+    temporary placeholder text within HTML text input fields, providing a 'hint'
+    to its intended purpose. Once the user focuses the input field, the
+    placeholder text disappears to give the user control over the field. If the
+    user does not enter text, the placeholder text re-appears as before.
+</p>
+<p>
+    This text is refered to as a 'hint' in the context of the plugin, other
+    plugins may refer to it as 'placeholder text' or 'watermarks,' but they are
+    the same thing.
+</p>
+<p>
+    This plugin was developed to replace the jQuery-UI-fieldHint plugin, which
+    depends on the jQuery UI library and is larger in file size. In rewriting
+    the plugin, an effort has been made to make the source code JSLint valid and
+    keep unnecessary features to a minimum.
+</p>
+<p>
+    The plugin was developed against jQuery version 1.8.3, but there is no
+    reason why it shouldn't work with older versions.
+</p>
+
+<h2><a name="usage"></a>Usage</h2>
+<p>
+    The simplest way to use the fieldHint plugin is to place title attributes on
+    the text input fields you wish to show hints for and run the plugin on them,
+    e.g.:
+</p>
+<p><strong>HTML Code:</strong></p>
+<pre>&lt;input type=&quot;text&quot; name=&quot;q&quot; title=&quot;Search...&quot; /></pre>
+<p><strong>JavaScript Code</strong></p>
+<pre>$('input[name=q]').fieldHint();</pre>
+<p>
+    The fieldHint plugin will extract the text from the input's title attribute
+    and use it to display the hint. This is the most basic example, below
+    follows an enumeration of additional functionality available through
+    options.
+</p>
+
+<h2><a name="options"></a>Options</h2>
+<p>
+    It is possible to customize the functionality of the fieldHint plugin with a
+    few additional options which you can provide in the fieldHint call, e.g.:
+</p>
+		<pre>
+$('input').fieldHint({
+	// options here as key-value pairs
+});
+		</pre>
+<p>
+    <strong><code>hint</code></strong> [string]: Display the text provided as a hint
+    within the input field instead of the text in its title attribute.
+</p>
+<p>
+    <strong><code>hintClass</code></strong> [string]: The name of a CSS class to
+    apply to the input field while the hint is visible.
+</p>
+<p>
+    <strong><code>removeTitle</code></strong> [Boolean]: If set to true, removes the
+    title attribute from the input field.
+</p>
+<p>
+    <strong><code>clearOnSubmit</code></strong> [Boolean]: If set to true, clears
+    the input field before its parent form submits (handles onsubmit).
+</p>
+<h2><a name="methods"></a>Methods</h2>
+<p>
+    Besides options, the fieldHint plugin also supports methods, which are
+    callable by passing a string to the fieldHint function instead of an
+    object, e.g.:
+</p>
+		<pre>
+$('input').fieldHint('methodName');
+		</pre>
+<p>
+    <strong><code>destroy</code></strong>: &quot;Undoes&quot; the effects of the
+    fieldHint plugin and restores the input fields to their original state.
+<p>
+<h2><a name="samples"></a>Usage Samples</h2>
+<ul>
+    <li>
+        <a href="../tests/minimal.html">A minimal implementation</a>
+    </li>
+    <li>
+        <a href="../tests/options.html">Providing options (removeTitle, hint, hintClass)</a>
+    </li>
+    <li>
+        <a href="../tests/submit.html">Form submission (clearOnSubmit)</a>
+    </li>
+    <li>
+        <a href="../tests/destroy.html">Destroy method usage sample</a>
+    </li>
+</ul>
+<p>
+    Copyright &copy; 2012, <a href="http://eddyluten.com/">Eddy Luten</a>.
+</p>
+</div>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-301718-13']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jquery.fieldHint.js options test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="../js/jquery.fieldHint-1.0.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('input[name=q]', this).fieldHint({
+                hint: 'Search...',
+                hintClass: 'hint',
+                removeTitle: true
+            });
+        });
+    </script>
+    <style type="text/css">
+        input[name=q].hint {
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+<p>
+    This page supplies a few options to fieldHint's initializer. These options
+    instruct fieldHint to:
+</p>
+<ol>
+    <li>Use a custom hint instead of the element's title attribute.</li>
+    <li>Apply a CSS class to the element while the hint is active.</li>
+    <li>Remove the element's title attribute once applied.</li>
+</ol>
+<p><input type="text" name="q" title="This attribute will be removed" /></p>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-301718-13']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+</body>
+</html>

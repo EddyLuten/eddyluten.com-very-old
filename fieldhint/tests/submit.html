@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>jquery.fieldHint.js submit test</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="../js/jquery.fieldHint-1.0.0.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		$(document).ready(function () {
+			$('input[name=q]', this).fieldHint({
+				clearOnSubmit: true
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<p>
+			This page contains a simple form to demonstrate fieldHint's clearOnSubmit
+			option, which, if set to true, clears the hint from the text input field
+			when its parent form is submitted. Once submitted, the value of the text
+			field will display as the 'q' URL parameter.
+		</p>
+		<p>
+			<form action="" method="get">
+				<input type="text" name="q" title="Search..." />
+				<button type="submit">Go!</button>
+			</form>
+		</p>
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-301718-13']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+	</body>
+</html>
