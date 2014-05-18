@@ -1,0 +1,41 @@
+body, html {
+    font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    color: #333;
+}
+
+a {
+    color: orangered;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #000;
+    /*font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;*/
+    font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#header a {
+    position: relative;
+    display: block;
+    float: right;
+    top: -50px;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+#wrapper {
+    width: 60%;
+    margin: 50px auto;
+}
+
+#footer {
+    font-size: small;
+}
